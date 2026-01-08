@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
 import { createClient } from "@/lib/supabase/server";
-import { isTranscriptEnglish } from "@/lib/transcript-language";
 import { withSecurity, SECURITY_PRESETS } from "@/lib/security-middleware";
 
 type SupabaseServerClient = Awaited<ReturnType<typeof createClient>>;
@@ -12,7 +11,7 @@ interface RandomVideoRow {
   duration: number | null;
   thumbnail_url: string | null;
   slug: string | null;
-  transcript: unknown;
+  language: string | null;
 }
 
 const RANDOM_BATCH_SIZE = 5;
@@ -24,9 +23,10 @@ async function fetchVideoBatch(
   start: number,
   end: number
 ): Promise<RandomVideoRow[]> {
+  // Select only needed columns - avoid fetching large transcript field (~100KB savings per row)
   const { data, error } = await supabase
     .from("video_analyses")
-    .select("youtube_id,title,author,duration,thumbnail_url,slug,transcript")
+    .select("youtube_id,title,author,duration,thumbnail_url,slug,language")
     .not("topics", "is", null)
     .order("created_at", { ascending: false })
     .range(start, end);
@@ -40,7 +40,15 @@ async function fetchVideoBatch(
 }
 
 function selectEnglishVideo(batch: RandomVideoRow[]): RandomVideoRow | null {
-  return batch.find((row) => isTranscriptEnglish(row.transcript)) ?? null;
+  // Use language column instead of fetching entire transcript
+  // This reduces data transfer by ~100KB per row
+  return batch.find((row) => {
+    if (!row.language) {
+      // If language is not set, assume English (older records before language tracking)
+      return true;
+    }
+    return row.language === 'en' || row.language.startsWith('en-');
+  }) ?? null;
 }
 
 async function getRandomEnglishVideo(

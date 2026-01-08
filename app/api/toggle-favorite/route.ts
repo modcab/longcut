@@ -56,38 +56,22 @@ async function handler(req: NextRequest) {
       );
     }
 
-    // Update the favorite status in user_videos table
+    // Use upsert to atomically update or insert the favorite status
+    // This prevents race conditions from concurrent requests
     const { data, error } = await supabase
       .from('user_videos')
-      .update({ is_favorite: isFavorite })
-      .eq('user_id', user.id)
-      .eq('video_id', video.id)
+      .upsert({
+        user_id: user.id,
+        video_id: video.id,
+        is_favorite: isFavorite,
+        accessed_at: new Date().toISOString()
+      }, {
+        onConflict: 'user_id,video_id'
+      })
       .select()
       .single();
 
     if (error) {
-      // If the record doesn't exist, create it
-      if (error.code === 'PGRST116') {
-        const { data: newData, error: insertError } = await supabase
-          .from('user_videos')
-          .insert({
-            user_id: user.id,
-            video_id: video.id,
-            is_favorite: isFavorite,
-            accessed_at: new Date().toISOString()
-          })
-          .select()
-          .single();
-
-        if (insertError) {
-          throw insertError;
-        }
-
-        return NextResponse.json({
-          success: true,
-          isFavorite: newData.is_favorite
-        });
-      }
       throw error;
     }
 

@@ -5,7 +5,10 @@ import { formatValidationError, noteDeleteSchema, noteInsertSchema } from '@/lib
 import { z } from 'zod';
 
 const getNotesQuerySchema = z.object({
-  youtubeId: z.string()
+  youtubeId: z.string().optional(),
+  videoId: z.string().optional()
+}).refine(data => data.youtubeId || data.videoId, {
+  message: 'Either youtubeId or videoId must be provided'
 });
 
 interface NoteRow {
@@ -45,24 +48,33 @@ async function handler(req: NextRequest) {
   if (req.method === 'GET') {
     const { searchParams } = new URL(req.url);
     const youtubeId = searchParams.get('youtubeId');
+    const videoIdParam = searchParams.get('videoId');
 
     try {
-      const { youtubeId: validatedYoutubeId } = getNotesQuerySchema.parse({ youtubeId });
+      const validated = getNotesQuerySchema.parse({ youtubeId, videoId: videoIdParam });
 
-      const { data: videos, error: videoError } = await supabase
-        .from('video_analyses')
-        .select('id')
-        .eq('youtube_id', validatedYoutubeId)
-        .order('created_at', { ascending: false })
-        .limit(1);
+      let targetVideoId: string | undefined;
 
-      if (videoError) {
-        throw videoError;
+      // If videoId (UUID) is provided directly, skip the video_analyses lookup
+      if (validated.videoId) {
+        targetVideoId = validated.videoId;
+      } else if (validated.youtubeId) {
+        // Fallback: lookup by youtube_id
+        const { data: videos, error: videoError } = await supabase
+          .from('video_analyses')
+          .select('id')
+          .eq('youtube_id', validated.youtubeId)
+          .order('created_at', { ascending: false })
+          .limit(1);
+
+        if (videoError) {
+          throw videoError;
+        }
+
+        targetVideoId = videos?.[0]?.id;
       }
 
-      const video = videos?.[0];
-
-      if (!video?.id) {
+      if (!targetVideoId) {
         return NextResponse.json({ notes: [] });
       }
 
@@ -70,7 +82,7 @@ async function handler(req: NextRequest) {
         .from('user_notes')
         .select('*')
         .eq('user_id', user.id)
-        .eq('video_id', video.id)
+        .eq('video_id', targetVideoId)
         .order('created_at', { ascending: false });
 
       if (error) {
@@ -101,29 +113,28 @@ async function handler(req: NextRequest) {
       const body = await req.json();
       const validatedData = noteInsertSchema.parse(body);
 
-      const youtubeId = validatedData.youtubeId;
+      let targetVideoId: string | undefined;
 
-      if (!youtubeId) {
-        return NextResponse.json(
-          { error: 'youtubeId is required' },
-          { status: 400 }
-        );
+      // If videoId (UUID) is provided directly, skip the video_analyses lookup
+      if (validatedData.videoId) {
+        targetVideoId = validatedData.videoId;
+      } else if (validatedData.youtubeId) {
+        // Fallback: lookup by youtube_id
+        const { data: videos, error: videoError } = await supabase
+          .from('video_analyses')
+          .select('id')
+          .eq('youtube_id', validatedData.youtubeId)
+          .order('created_at', { ascending: false })
+          .limit(1);
+
+        if (videoError) {
+          throw videoError;
+        }
+
+        targetVideoId = videos?.[0]?.id;
       }
 
-      const { data: videos, error: videoError } = await supabase
-        .from('video_analyses')
-        .select('id')
-        .eq('youtube_id', youtubeId)
-        .order('created_at', { ascending: false })
-        .limit(1);
-
-      if (videoError) {
-        throw videoError;
-      }
-
-      const video = videos?.[0];
-
-      if (!video?.id) {
+      if (!targetVideoId) {
         return NextResponse.json(
           { error: 'Video not found' },
           { status: 404 }
@@ -134,7 +145,7 @@ async function handler(req: NextRequest) {
         .from('user_notes')
         .insert({
           user_id: user.id,
-          video_id: video.id,
+          video_id: targetVideoId,
           source: validatedData.source,
           source_id: validatedData.sourceId || null,
           note_text: validatedData.text,
