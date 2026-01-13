@@ -436,7 +436,7 @@ async function handler(req: NextRequest) {
         p_youtube_id: videoId,
         p_title: videoInfo?.title || `YouTube Video ${videoId}`,
         p_author: videoInfo?.author || null,
-        p_duration: videoInfo?.duration || null,
+        p_duration: videoInfo?.duration ?? 0,
         p_thumbnail_url: videoInfo?.thumbnail || null,
         p_transcript: transcript,
         p_topics: topics,
