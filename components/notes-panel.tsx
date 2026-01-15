@@ -6,8 +6,9 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
-import { Trash2, Clock } from "lucide-react";
+import { Trash2, Clock, Plus } from "lucide-react";
 import { NoteEditor } from "@/components/note-editor";
+import { cn } from "@/lib/utils";
 
 function formatDateOnly(dateString: string): string {
   const date = new Date(dateString);
@@ -85,10 +86,13 @@ interface NotesPanelProps {
   notes?: Note[];
   onDeleteNote?: (noteId: string) => Promise<void>;
   editingNote?: EditingNote | null;
-  onSaveEditingNote?: (payload: { noteText: string; selectedText: string }) => void;
+  onSaveEditingNote?: (payload: { noteText: string; selectedText: string; metadata?: NoteMetadata }) => void;
   onCancelEditing?: () => void;
   isAuthenticated?: boolean;
   onSignInClick?: () => void;
+  currentTime?: number;
+  onTimestampClick?: (seconds: number) => void;
+  onAddNote?: () => void;
 }
 
 function getSourceLabel(source: NoteSource) {
@@ -104,7 +108,18 @@ function getSourceLabel(source: NoteSource) {
   }
 }
 
-export function NotesPanel({ notes = [], onDeleteNote, editingNote, onSaveEditingNote, onCancelEditing, isAuthenticated = true, onSignInClick }: NotesPanelProps) {
+export function NotesPanel({
+  notes = [],
+  onDeleteNote,
+  editingNote,
+  onSaveEditingNote,
+  onCancelEditing,
+  isAuthenticated = true,
+  onSignInClick,
+  currentTime,
+  onTimestampClick,
+  onAddNote
+}: NotesPanelProps) {
   const groupedNotes = useMemo(() => {
     return notes.reduce<Record<NoteSource, Note[]>>((acc, note) => {
       const list = acc[note.source] || [];
@@ -136,8 +151,18 @@ export function NotesPanel({ notes = [], onDeleteNote, editingNote, onSaveEditin
 
   if (!notes.length && !editingNote) {
     return (
-      <div className="h-full flex items-center justify-center text-sm text-muted-foreground px-6 text-center">
-        Your saved notes will appear here. Highlight transcript or chat text to take a note.
+      <div className="h-full flex flex-col items-center justify-center text-sm text-muted-foreground px-6 text-center gap-4">
+        <p>Your saved notes will appear here. Highlight transcript or chat text to take a note.</p>
+        {onAddNote && (
+          <Button
+            onClick={onAddNote}
+            variant="outline"
+            className="gap-2 rounded-xl border-dashed border-slate-300 bg-white/50 text-slate-600 hover:bg-white hover:text-slate-900"
+          >
+            <Plus className="h-3.5 w-3.5" />
+            Add a note
+          </Button>
+        )}
       </div>
     );
   }
@@ -145,11 +170,24 @@ export function NotesPanel({ notes = [], onDeleteNote, editingNote, onSaveEditin
   return (
     <ScrollArea className="h-full">
       <div className="p-4 space-y-5 w-full max-w-full overflow-hidden">
+        {/* Add Note Button */}
+        {!editingNote && onAddNote && (
+          <Button
+            onClick={onAddNote}
+            className="w-full gap-2 rounded-xl border border-dashed border-slate-300 bg-white/50 text-slate-600 shadow-sm hover:bg-white hover:text-slate-900 h-9 text-xs font-medium"
+            variant="outline"
+          >
+            <Plus className="h-3.5 w-3.5" />
+            Add Note
+          </Button>
+        )}
+
         {/* Note Editor - shown when editing */}
         {editingNote && onSaveEditingNote && onCancelEditing && (
           <NoteEditor
             selectedText={editingNote.text}
             metadata={editingNote.metadata}
+            currentTime={currentTime}
             onSave={onSaveEditingNote}
             onCancel={onCancelEditing}
           />
@@ -167,7 +205,7 @@ export function NotesPanel({ notes = [], onDeleteNote, editingNote, onSaveEditin
                 const text = note.text ?? "";
 
                 let quoteText = "";
-                    let additionalText = "";
+                let additionalText = "";
 
                 if (selectedText) {
                   quoteText = selectedText;
@@ -195,8 +233,20 @@ export function NotesPanel({ notes = [], onDeleteNote, editingNote, onSaveEditin
                 }
 
                 if (!isTranscriptNote && note.metadata?.timestampLabel) {
-                  inlineMetadata.push(
-                    <span key="timestamp" className="flex items-center gap-1">
+                   const hasTimestamp = typeof note.metadata.transcript?.start === 'number';
+                   inlineMetadata.push(
+                    <span
+                      key="timestamp"
+                      className={cn(
+                        "flex items-center gap-1",
+                        hasTimestamp && onTimestampClick ? "cursor-pointer hover:text-primary transition-colors hover:underline" : ""
+                      )}
+                      onClick={() => {
+                        if (hasTimestamp && onTimestampClick && note.metadata?.transcript?.start !== undefined) {
+                           onTimestampClick(note.metadata.transcript.start);
+                        }
+                      }}
+                    >
                       <Clock className="w-3 h-3" />
                       {note.metadata.timestampLabel}
                     </span>

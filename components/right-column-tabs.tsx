@@ -39,7 +39,7 @@ interface RightColumnTabsProps {
   onSaveNote?: (payload: { text: string; source: NoteSource; sourceId?: string | null; metadata?: NoteMetadata | null }) => Promise<void>;
   onTakeNoteFromSelection?: (payload: SelectionActionPayload) => void;
   editingNote?: EditingNote | null;
-  onSaveEditingNote?: (payload: { noteText: string; selectedText: string }) => void;
+  onSaveEditingNote?: (payload: { noteText: string; selectedText: string; metadata?: NoteMetadata }) => void;
   onCancelEditing?: () => void;
   isAuthenticated?: boolean;
   onRequestSignIn?: () => void;
@@ -56,6 +56,7 @@ interface RightColumnTabsProps {
     badgeLabel?: string;
     isLoading?: boolean;
   };
+  onAddNote?: () => void;
 }
 
 export interface RightColumnTabsHandle {
@@ -93,7 +94,7 @@ export const RightColumnTabs = forwardRef<RightColumnTabsHandle, RightColumnTabs
   currentSourceLanguage,
   onRequestExport,
   exportButtonState,
-
+  onAddNote
 }, ref) => {
   const [activeTab, setActiveTab] = useState<"transcript" | "chat" | "notes">("transcript");
   const showTranslationSelector = translationSelectorEnabled;
@@ -239,6 +240,9 @@ export const RightColumnTabs = forwardRef<RightColumnTabsHandle, RightColumnTabs
               onCancelEditing={onCancelEditing}
               isAuthenticated={isAuthenticated}
               onSignInClick={onRequestSignIn}
+              currentTime={currentTime}
+              onTimestampClick={onTimestampClick}
+              onAddNote={onAddNote}
             />
           </TooltipProvider>
         </div>

@@ -1,0 +1,816 @@
+
+> nextjs@0.1.0 dev /app
+> next dev --turbopack
+
+   ▲ Next.js 15.5.7 (Turbopack)
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.0.2:3000
+
+ ✓ Starting...
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+
+ ○ Compiling middleware ...
+ ✓ Compiled middleware in 649ms
+ ✓ Ready in 2.3s
+Auth token refresh failed: Auth session missing!
+ ○ Compiling /analyze/[videoId] ...
+ ✓ Compiled /analyze/[videoId] in 8.5s
+ GET /analyze/test-video-123 200 in 11641ms
+Auth token refresh failed: Auth session missing!
+Auth token refresh failed: Auth session missing!
+Auth token refresh failed: Auth session missing!
+ ○ Compiling /api/image-limit ...
+ GET /api/csrf-token 401 in 2402ms
+Auth token refresh failed: Auth session missing!
+Rate limiter error: {
+  message: 'TypeError: fetch failed',
+  details: 'TypeError: fetch failed\n' +
+    '    at node:internal/deps/undici/undici:14900:13\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at async RateLimiter.check (/app/.next/server/chunks/[root-of-the-server]__30d340b0._.js:315:65)\n' +
+    '    at async securedHandler (/app/.next/server/chunks/[root-of-the-server]__30d340b0._.js:711:41)\n' +
+    '    at async AppRouteRouteModule.do (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:5:38696)\n' +
+    '    at async AppRouteRouteModule.handle (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:5:45978)\n' +
+    '    at async responseGenerator (/app/.next/server/chunks/dd0d4_next_b26d18d7._.js:15715:38)\n' +
+    '    at async AppRouteRouteModule.handleResponse (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:1:187643)\n' +
+    '    at async handleResponse (/app/.next/server/chunks/dd0d4_next_b26d18d7._.js:15777:32)\n' +
+    '    at async handler (/app/.next/server/chunks/dd0d4_next_b26d18d7._.js:15829:13)\n' +
+    '    at async DevServer.renderToResponseWithComponentsImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1422:9)\n' +
+    '    at async DevServer.renderPageComponent (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1474:24)\n' +
+    '    at async DevServer.renderToResponseImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1514:32)\n' +
+    '    at async DevServer.pipeImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1025:25)\n' +
+    '    at async NextNodeServer.handleCatchallRenderRequest (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/next-server.js:393:17)\n' +
+    '    at async DevServer.handleRequestImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:916:17)\n' +
+    '    at async /app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/dev/next-dev-server.js:399:20\n' +
+    '    at async Span.traceAsyncFn (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/trace/trace.js:157:20)\n' +
+    '    at async DevServer.handleRequest (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/dev/next-dev-server.js:395:24)\n' +
+    '    at async invokeRender (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/router-server.js:240:21)\n' +
+    '    at async handleRequest (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/router-server.js:437:24)\n' +
+    '    at async requestHandlerImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/router-server.js:485:13)\n' +
+    '    at async Server.requestListener (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/start-server.js:226:13)',
+  hint: '',
+  code: ''
+}
+ GET /api/image-limit 200 in 2912ms
+Rate limiter error: {
+  message: 'TypeError: fetch failed',
+  details: 'TypeError: fetch failed\n' +
+    '    at node:internal/deps/undici/undici:14900:13\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at async RateLimiter.check (/app/.next/server/chunks/[root-of-the-server]__30d340b0._.js:315:65)\n' +
+    '    at async securedHandler (/app/.next/server/chunks/[root-of-the-server]__30d340b0._.js:711:41)\n' +
+    '    at async AppRouteRouteModule.do (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:5:38696)\n' +
+    '    at async AppRouteRouteModule.handle (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:5:45978)\n' +
+    '    at async responseGenerator (/app/.next/server/chunks/dd0d4_next_b26d18d7._.js:15715:38)\n' +
+    '    at async AppRouteRouteModule.handleResponse (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:1:187643)\n' +
+    '    at async handleResponse (/app/.next/server/chunks/dd0d4_next_b26d18d7._.js:15777:32)\n' +
+    '    at async handler (/app/.next/server/chunks/dd0d4_next_b26d18d7._.js:15829:13)\n' +
+    '    at async DevServer.renderToResponseWithComponentsImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1422:9)\n' +
+    '    at async DevServer.renderPageComponent (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1474:24)\n' +
+    '    at async DevServer.renderToResponseImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1514:32)\n' +
+    '    at async DevServer.pipeImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1025:25)\n' +
+    '    at async NextNodeServer.handleCatchallRenderRequest (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/next-server.js:393:17)\n' +
+    '    at async DevServer.handleRequestImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:916:17)\n' +
+    '    at async /app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/dev/next-dev-server.js:399:20\n' +
+    '    at async Span.traceAsyncFn (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/trace/trace.js:157:20)\n' +
+    '    at async DevServer.handleRequest (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/dev/next-dev-server.js:395:24)\n' +
+    '    at async invokeRender (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/router-server.js:240:21)\n' +
+    '    at async handleRequest (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/router-server.js:437:24)\n' +
+    '    at async requestHandlerImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/router-server.js:485:13)\n' +
+    '    at async Server.requestListener (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/start-server.js:226:13)',
+  hint: '',
+  code: ''
+}
+ GET /api/image-limit 200 in 2915ms
+ ✓ Compiled /api/image-limit in 2.9s
+ POST /api/update-video-analysis 401 in 715ms
+Auth token refresh failed: Auth session missing!
+ GET /analyze/test-video-123 200 in 731ms
+Auth token refresh failed: Auth session missing!
+Auth token refresh failed: Auth session missing!
+Auth token refresh failed: Auth session missing!
+Rate limiter error: {
+  message: 'TypeError: fetch failed',
+  details: 'TypeError: fetch failed\n' +
+    '    at node:internal/deps/undici/undici:14900:13\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at async RateLimiter.check (/app/.next/server/chunks/[root-of-the-server]__30d340b0._.js:315:65)\n' +
+    '    at async securedHandler (/app/.next/server/chunks/[root-of-the-server]__30d340b0._.js:711:41)\n' +
+    '    at async AppRouteRouteModule.do (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:5:38696)\n' +
+    '    at async AppRouteRouteModule.handle (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:5:45978)\n' +
+    '    at async responseGenerator (/app/.next/server/chunks/dd0d4_next_b26d18d7._.js:15715:38)\n' +
+    '    at async AppRouteRouteModule.handleResponse (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:1:187643)\n' +
+    '    at async handleResponse (/app/.next/server/chunks/dd0d4_next_b26d18d7._.js:15777:32)\n' +
+    '    at async handler (/app/.next/server/chunks/dd0d4_next_b26d18d7._.js:15829:13)\n' +
+    '    at async DevServer.renderToResponseWithComponentsImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1422:9)\n' +
+    '    at async DevServer.renderPageComponent (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1474:24)\n' +
+    '    at async DevServer.renderToResponseImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1514:32)\n' +
+    '    at async DevServer.pipeImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1025:25)\n' +
+    '    at async NextNodeServer.handleCatchallRenderRequest (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/next-server.js:393:17)\n' +
+    '    at async DevServer.handleRequestImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:916:17)\n' +
+    '    at async /app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/dev/next-dev-server.js:399:20\n' +
+    '    at async Span.traceAsyncFn (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/trace/trace.js:157:20)\n' +
+    '    at async DevServer.handleRequest (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/dev/next-dev-server.js:395:24)\n' +
+    '    at async invokeRender (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/router-server.js:240:21)\n' +
+    '    at async handleRequest (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/router-server.js:437:24)\n' +
+    '    at async requestHandlerImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/router-server.js:485:13)\n' +
+    '    at async Server.requestListener (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/start-server.js:226:13)',
+  hint: '',
+  code: ''
+}
+ GET /api/image-limit 200 in 427ms
+Rate limiter error: {
+  message: 'TypeError: fetch failed',
+  details: 'TypeError: fetch failed\n' +
+    '    at node:internal/deps/undici/undici:14900:13\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at async RateLimiter.check (/app/.next/server/chunks/[root-of-the-server]__30d340b0._.js:315:65)\n' +
+    '    at async securedHandler (/app/.next/server/chunks/[root-of-the-server]__30d340b0._.js:711:41)\n' +
+    '    at async AppRouteRouteModule.do (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:5:38696)\n' +
+    '    at async AppRouteRouteModule.handle (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:5:45978)\n' +
+    '    at async responseGenerator (/app/.next/server/chunks/dd0d4_next_b26d18d7._.js:15715:38)\n' +
+    '    at async AppRouteRouteModule.handleResponse (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:1:187643)\n' +
+    '    at async handleResponse (/app/.next/server/chunks/dd0d4_next_b26d18d7._.js:15777:32)\n' +
+    '    at async handler (/app/.next/server/chunks/dd0d4_next_b26d18d7._.js:15829:13)\n' +
+    '    at async DevServer.renderToResponseWithComponentsImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1422:9)\n' +
+    '    at async DevServer.renderPageComponent (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1474:24)\n' +
+    '    at async DevServer.renderToResponseImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1514:32)\n' +
+    '    at async DevServer.pipeImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1025:25)\n' +
+    '    at async NextNodeServer.handleCatchallRenderRequest (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/next-server.js:393:17)\n' +
+    '    at async DevServer.handleRequestImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:916:17)\n' +
+    '    at async /app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/dev/next-dev-server.js:399:20\n' +
+    '    at async Span.traceAsyncFn (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/trace/trace.js:157:20)\n' +
+    '    at async DevServer.handleRequest (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/dev/next-dev-server.js:395:24)\n' +
+    '    at async invokeRender (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/router-server.js:240:21)\n' +
+    '    at async handleRequest (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/router-server.js:437:24)\n' +
+    '    at async requestHandlerImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/router-server.js:485:13)\n' +
+    '    at async Server.requestListener (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/start-server.js:226:13)',
+  hint: '',
+  code: ''
+}
+ GET /api/image-limit 200 in 434ms
+ GET /api/csrf-token 401 in 382ms
+Auth token refresh failed: Auth session missing!
+ POST /api/update-video-analysis 401 in 290ms
+Auth token refresh failed: Auth session missing!
+ GET /analyze/test-video-123 200 in 1514ms
+Auth token refresh failed: Auth session missing!
+Auth token refresh failed: Auth session missing!
+Auth token refresh failed: Auth session missing!
+ GET /api/csrf-token 401 in 425ms
+Rate limiter error: {
+  message: 'TypeError: fetch failed',
+  details: 'TypeError: fetch failed\n' +
+    '    at node:internal/deps/undici/undici:14900:13\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at async RateLimiter.check (/app/.next/server/chunks/[root-of-the-server]__30d340b0._.js:315:65)\n' +
+    '    at async securedHandler (/app/.next/server/chunks/[root-of-the-server]__30d340b0._.js:711:41)\n' +
+    '    at async AppRouteRouteModule.do (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:5:38696)\n' +
+    '    at async AppRouteRouteModule.handle (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:5:45978)\n' +
+    '    at async responseGenerator (/app/.next/server/chunks/dd0d4_next_b26d18d7._.js:15715:38)\n' +
+    '    at async AppRouteRouteModule.handleResponse (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:1:187643)\n' +
+    '    at async handleResponse (/app/.next/server/chunks/dd0d4_next_b26d18d7._.js:15777:32)\n' +
+    '    at async handler (/app/.next/server/chunks/dd0d4_next_b26d18d7._.js:15829:13)\n' +
+    '    at async DevServer.renderToResponseWithComponentsImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1422:9)\n' +
+    '    at async DevServer.renderPageComponent (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1474:24)\n' +
+    '    at async DevServer.renderToResponseImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1514:32)\n' +
+    '    at async DevServer.pipeImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1025:25)\n' +
+    '    at async NextNodeServer.handleCatchallRenderRequest (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/next-server.js:393:17)\n' +
+    '    at async DevServer.handleRequestImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:916:17)\n' +
+    '    at async /app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/dev/next-dev-server.js:399:20\n' +
+    '    at async Span.traceAsyncFn (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/trace/trace.js:157:20)\n' +
+    '    at async DevServer.handleRequest (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/dev/next-dev-server.js:395:24)\n' +
+    '    at async invokeRender (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/router-server.js:240:21)\n' +
+    '    at async handleRequest (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/router-server.js:437:24)\n' +
+    '    at async requestHandlerImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/router-server.js:485:13)\n' +
+    '    at async Server.requestListener (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/start-server.js:226:13)',
+  hint: '',
+  code: ''
+}
+ GET /api/image-limit 200 in 494ms
+Rate limiter error: {
+  message: 'TypeError: fetch failed',
+  details: 'TypeError: fetch failed\n' +
+    '    at node:internal/deps/undici/undici:14900:13\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at async RateLimiter.check (/app/.next/server/chunks/[root-of-the-server]__30d340b0._.js:315:65)\n' +
+    '    at async securedHandler (/app/.next/server/chunks/[root-of-the-server]__30d340b0._.js:711:41)\n' +
+    '    at async AppRouteRouteModule.do (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:5:38696)\n' +
+    '    at async AppRouteRouteModule.handle (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:5:45978)\n' +
+    '    at async responseGenerator (/app/.next/server/chunks/dd0d4_next_b26d18d7._.js:15715:38)\n' +
+    '    at async AppRouteRouteModule.handleResponse (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:1:187643)\n' +
+    '    at async handleResponse (/app/.next/server/chunks/dd0d4_next_b26d18d7._.js:15777:32)\n' +
+    '    at async handler (/app/.next/server/chunks/dd0d4_next_b26d18d7._.js:15829:13)\n' +
+    '    at async DevServer.renderToResponseWithComponentsImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1422:9)\n' +
+    '    at async DevServer.renderPageComponent (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1474:24)\n' +
+    '    at async DevServer.renderToResponseImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1514:32)\n' +
+    '    at async DevServer.pipeImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1025:25)\n' +
+    '    at async NextNodeServer.handleCatchallRenderRequest (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/next-server.js:393:17)\n' +
+    '    at async DevServer.handleRequestImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:916:17)\n' +
+    '    at async /app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/dev/next-dev-server.js:399:20\n' +
+    '    at async Span.traceAsyncFn (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/trace/trace.js:157:20)\n' +
+    '    at async DevServer.handleRequest (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/dev/next-dev-server.js:395:24)\n' +
+    '    at async invokeRender (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/router-server.js:240:21)\n' +
+    '    at async handleRequest (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/router-server.js:437:24)\n' +
+    '    at async requestHandlerImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/router-server.js:485:13)\n' +
+    '    at async Server.requestListener (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/start-server.js:226:13)',
+  hint: '',
+  code: ''
+}
+ GET /api/image-limit 200 in 496ms
+Auth token refresh failed: Auth session missing!
+ POST /api/update-video-analysis 401 in 296ms
+Auth token refresh failed: Auth session missing!
+ GET /analyze/test-video-123 200 in 1713ms
+Auth token refresh failed: Auth session missing!
+ ○ Compiling /api/subscription/status ...
+Auth token refresh failed: Auth session missing!
+Auth token refresh failed: Auth session missing!
+ ✓ Compiled /api/subscription/status in 1193ms
+Auth token refresh failed: Auth session missing!
+Rate limiter error: {
+  message: 'TypeError: fetch failed',
+  details: 'TypeError: fetch failed\n' +
+    '    at node:internal/deps/undici/undici:14900:13\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at async RateLimiter.check (/app/.next/server/chunks/[root-of-the-server]__30d340b0._.js:315:65)\n' +
+    '    at async securedHandler (/app/.next/server/chunks/[root-of-the-server]__30d340b0._.js:711:41)\n' +
+    '    at async AppRouteRouteModule.do (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:5:38696)\n' +
+    '    at async AppRouteRouteModule.handle (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:5:45978)\n' +
+    '    at async responseGenerator (/app/.next/server/chunks/dd0d4_next_b26d18d7._.js:15715:38)\n' +
+    '    at async AppRouteRouteModule.handleResponse (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:1:187643)\n' +
+    '    at async handleResponse (/app/.next/server/chunks/dd0d4_next_b26d18d7._.js:15777:32)\n' +
+    '    at async handler (/app/.next/server/chunks/dd0d4_next_b26d18d7._.js:15829:13)\n' +
+    '    at async DevServer.renderToResponseWithComponentsImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1422:9)\n' +
+    '    at async DevServer.renderPageComponent (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1474:24)\n' +
+    '    at async DevServer.renderToResponseImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1514:32)\n' +
+    '    at async DevServer.pipeImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1025:25)\n' +
+    '    at async NextNodeServer.handleCatchallRenderRequest (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/next-server.js:393:17)\n' +
+    '    at async DevServer.handleRequestImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:916:17)\n' +
+    '    at async /app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/dev/next-dev-server.js:399:20\n' +
+    '    at async Span.traceAsyncFn (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/trace/trace.js:157:20)\n' +
+    '    at async DevServer.handleRequest (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/dev/next-dev-server.js:395:24)\n' +
+    '    at async invokeRender (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/router-server.js:240:21)\n' +
+    '    at async handleRequest (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/router-server.js:437:24)\n' +
+    '    at async requestHandlerImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/router-server.js:485:13)\n' +
+    '    at async Server.requestListener (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/start-server.js:226:13)',
+  hint: '',
+  code: ''
+}
+ GET /api/image-limit 200 in 467ms
+Rate limiter error: {
+  message: 'TypeError: fetch failed',
+  details: 'TypeError: fetch failed\n' +
+    '    at node:internal/deps/undici/undici:14900:13\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at async RateLimiter.check (/app/.next/server/chunks/[root-of-the-server]__30d340b0._.js:315:65)\n' +
+    '    at async securedHandler (/app/.next/server/chunks/[root-of-the-server]__30d340b0._.js:711:41)\n' +
+    '    at async AppRouteRouteModule.do (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:5:38696)\n' +
+    '    at async AppRouteRouteModule.handle (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:5:45978)\n' +
+    '    at async responseGenerator (/app/.next/server/chunks/dd0d4_next_b26d18d7._.js:15715:38)\n' +
+    '    at async AppRouteRouteModule.handleResponse (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:1:187643)\n' +
+    '    at async handleResponse (/app/.next/server/chunks/dd0d4_next_b26d18d7._.js:15777:32)\n' +
+    '    at async handler (/app/.next/server/chunks/dd0d4_next_b26d18d7._.js:15829:13)\n' +
+    '    at async DevServer.renderToResponseWithComponentsImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1422:9)\n' +
+    '    at async DevServer.renderPageComponent (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1474:24)\n' +
+    '    at async DevServer.renderToResponseImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1514:32)\n' +
+    '    at async DevServer.pipeImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1025:25)\n' +
+    '    at async NextNodeServer.handleCatchallRenderRequest (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/next-server.js:393:17)\n' +
+    '    at async DevServer.handleRequestImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:916:17)\n' +
+    '    at async /app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/dev/next-dev-server.js:399:20\n' +
+    '    at async Span.traceAsyncFn (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/trace/trace.js:157:20)\n' +
+    '    at async DevServer.handleRequest (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/dev/next-dev-server.js:395:24)\n' +
+    '    at async invokeRender (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/router-server.js:240:21)\n' +
+    '    at async handleRequest (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/router-server.js:437:24)\n' +
+    '    at async requestHandlerImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/router-server.js:485:13)\n' +
+    '    at async Server.requestListener (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/start-server.js:226:13)',
+  hint: '',
+  code: ''
+}
+ GET /api/image-limit 200 in 429ms
+ GET /api/subscription/status 401 in 1615ms
+ GET /api/csrf-token 401 in 439ms
+Auth token refresh failed: Auth session missing!
+Auth token refresh failed: Auth session missing!
+ GET /api/subscription/status 401 in 353ms
+ POST /api/update-video-analysis 401 in 338ms
+Auth token refresh failed: Auth session missing!
+ GET /api/subscription/status 401 in 385ms
+Auth token refresh failed: Auth session missing!
+ GET /api/subscription/status 401 in 309ms
+Auth token refresh failed: Auth session missing!
+ GET /api/subscription/status 401 in 307ms
+Auth token refresh failed: Auth session missing!
+ GET /api/subscription/status 401 in 295ms
+Auth token refresh failed: Auth session missing!
+ GET /api/subscription/status 401 in 318ms
+Auth token refresh failed: Auth session missing!
+ GET /api/subscription/status 401 in 287ms
+Auth token refresh failed: Auth session missing!
+ GET /api/subscription/status 401 in 339ms
+Auth token refresh failed: Auth session missing!
+ GET /api/subscription/status 401 in 288ms
+Auth token refresh failed: Auth session missing!
+ GET /api/subscription/status 401 in 294ms
+Auth token refresh failed: Auth session missing!
+ GET /api/subscription/status 401 in 279ms
+Auth token refresh failed: Auth session missing!
+ GET /api/subscription/status 401 in 553ms
+Auth token refresh failed: Auth session missing!
+ GET /api/subscription/status 401 in 311ms
+Auth token refresh failed: Auth session missing!
+ GET /api/subscription/status 401 in 312ms
+Auth token refresh failed: Auth session missing!
+ GET /api/subscription/status 200 in 250ms
+Auth token refresh failed: Auth session missing!
+ GET /analyze/test-video-123 200 in 371ms
+Auth token refresh failed: Auth session missing!
+Auth token refresh failed: Auth session missing!
+Auth token refresh failed: Auth session missing!
+Rate limiter error: {
+  message: 'TypeError: fetch failed',
+  details: 'TypeError: fetch failed\n' +
+    '    at node:internal/deps/undici/undici:14900:13\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at async RateLimiter.check (/app/.next/server/chunks/[root-of-the-server]__30d340b0._.js:315:65)\n' +
+    '    at async securedHandler (/app/.next/server/chunks/[root-of-the-server]__30d340b0._.js:711:41)\n' +
+    '    at async AppRouteRouteModule.do (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:5:38696)\n' +
+    '    at async AppRouteRouteModule.handle (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:5:45978)\n' +
+    '    at async responseGenerator (/app/.next/server/chunks/dd0d4_next_b26d18d7._.js:15715:38)\n' +
+    '    at async AppRouteRouteModule.handleResponse (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:1:187643)\n' +
+    '    at async handleResponse (/app/.next/server/chunks/dd0d4_next_b26d18d7._.js:15777:32)\n' +
+    '    at async handler (/app/.next/server/chunks/dd0d4_next_b26d18d7._.js:15829:13)\n' +
+    '    at async DevServer.renderToResponseWithComponentsImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1422:9)\n' +
+    '    at async DevServer.renderPageComponent (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1474:24)\n' +
+    '    at async DevServer.renderToResponseImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1514:32)\n' +
+    '    at async DevServer.pipeImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1025:25)\n' +
+    '    at async NextNodeServer.handleCatchallRenderRequest (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/next-server.js:393:17)\n' +
+    '    at async DevServer.handleRequestImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:916:17)\n' +
+    '    at async /app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/dev/next-dev-server.js:399:20\n' +
+    '    at async Span.traceAsyncFn (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/trace/trace.js:157:20)\n' +
+    '    at async DevServer.handleRequest (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/dev/next-dev-server.js:395:24)\n' +
+    '    at async invokeRender (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/router-server.js:240:21)\n' +
+    '    at async handleRequest (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/router-server.js:437:24)\n' +
+    '    at async requestHandlerImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/router-server.js:485:13)\n' +
+    '    at async Server.requestListener (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/start-server.js:226:13)',
+  hint: '',
+  code: ''
+}
+ GET /api/image-limit 200 in 533ms
+Rate limiter error: {
+  message: 'TypeError: fetch failed',
+  details: 'TypeError: fetch failed\n' +
+    '    at node:internal/deps/undici/undici:14900:13\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at async RateLimiter.check (/app/.next/server/chunks/[root-of-the-server]__30d340b0._.js:315:65)\n' +
+    '    at async securedHandler (/app/.next/server/chunks/[root-of-the-server]__30d340b0._.js:711:41)\n' +
+    '    at async AppRouteRouteModule.do (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:5:38696)\n' +
+    '    at async AppRouteRouteModule.handle (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:5:45978)\n' +
+    '    at async responseGenerator (/app/.next/server/chunks/dd0d4_next_b26d18d7._.js:15715:38)\n' +
+    '    at async AppRouteRouteModule.handleResponse (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:1:187643)\n' +
+    '    at async handleResponse (/app/.next/server/chunks/dd0d4_next_b26d18d7._.js:15777:32)\n' +
+    '    at async handler (/app/.next/server/chunks/dd0d4_next_b26d18d7._.js:15829:13)\n' +
+    '    at async DevServer.renderToResponseWithComponentsImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1422:9)\n' +
+    '    at async DevServer.renderPageComponent (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1474:24)\n' +
+    '    at async DevServer.renderToResponseImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1514:32)\n' +
+    '    at async DevServer.pipeImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1025:25)\n' +
+    '    at async NextNodeServer.handleCatchallRenderRequest (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/next-server.js:393:17)\n' +
+    '    at async DevServer.handleRequestImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:916:17)\n' +
+    '    at async /app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/dev/next-dev-server.js:399:20\n' +
+    '    at async Span.traceAsyncFn (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/trace/trace.js:157:20)\n' +
+    '    at async DevServer.handleRequest (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/dev/next-dev-server.js:395:24)\n' +
+    '    at async invokeRender (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/router-server.js:240:21)\n' +
+    '    at async handleRequest (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/router-server.js:437:24)\n' +
+    '    at async requestHandlerImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/router-server.js:485:13)\n' +
+    '    at async Server.requestListener (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/start-server.js:226:13)',
+  hint: '',
+  code: ''
+}
+ GET /api/image-limit 200 in 580ms
+ GET /api/csrf-token 401 in 526ms
+Auth token refresh failed: Auth session missing!
+ POST /api/update-video-analysis 401 in 284ms
+Auth token refresh failed: Auth session missing!
+ GET /analyze/test-video-123 200 in 388ms
+Auth token refresh failed: Auth session missing!
+Auth token refresh failed: Auth session missing!
+Auth token refresh failed: Auth session missing!
+ GET /api/csrf-token 401 in 419ms
+Rate limiter error: {
+  message: 'TypeError: fetch failed',
+  details: 'TypeError: fetch failed\n' +
+    '    at node:internal/deps/undici/undici:14900:13\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at async RateLimiter.check (/app/.next/server/chunks/[root-of-the-server]__30d340b0._.js:315:65)\n' +
+    '    at async securedHandler (/app/.next/server/chunks/[root-of-the-server]__30d340b0._.js:711:41)\n' +
+    '    at async AppRouteRouteModule.do (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:5:38696)\n' +
+    '    at async AppRouteRouteModule.handle (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:5:45978)\n' +
+    '    at async responseGenerator (/app/.next/server/chunks/dd0d4_next_b26d18d7._.js:15715:38)\n' +
+    '    at async AppRouteRouteModule.handleResponse (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:1:187643)\n' +
+    '    at async handleResponse (/app/.next/server/chunks/dd0d4_next_b26d18d7._.js:15777:32)\n' +
+    '    at async handler (/app/.next/server/chunks/dd0d4_next_b26d18d7._.js:15829:13)\n' +
+    '    at async DevServer.renderToResponseWithComponentsImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1422:9)\n' +
+    '    at async DevServer.renderPageComponent (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1474:24)\n' +
+    '    at async DevServer.renderToResponseImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1514:32)\n' +
+    '    at async DevServer.pipeImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1025:25)\n' +
+    '    at async NextNodeServer.handleCatchallRenderRequest (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/next-server.js:393:17)\n' +
+    '    at async DevServer.handleRequestImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:916:17)\n' +
+    '    at async /app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/dev/next-dev-server.js:399:20\n' +
+    '    at async Span.traceAsyncFn (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/trace/trace.js:157:20)\n' +
+    '    at async DevServer.handleRequest (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/dev/next-dev-server.js:395:24)\n' +
+    '    at async invokeRender (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/router-server.js:240:21)\n' +
+    '    at async handleRequest (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/router-server.js:437:24)\n' +
+    '    at async requestHandlerImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/router-server.js:485:13)\n' +
+    '    at async Server.requestListener (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/start-server.js:226:13)',
+  hint: '',
+  code: ''
+}
+ GET /api/image-limit 200 in 467ms
+Rate limiter error: {
+  message: 'TypeError: fetch failed',
+  details: 'TypeError: fetch failed\n' +
+    '    at node:internal/deps/undici/undici:14900:13\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at async RateLimiter.check (/app/.next/server/chunks/[root-of-the-server]__30d340b0._.js:315:65)\n' +
+    '    at async securedHandler (/app/.next/server/chunks/[root-of-the-server]__30d340b0._.js:711:41)\n' +
+    '    at async AppRouteRouteModule.do (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:5:38696)\n' +
+    '    at async AppRouteRouteModule.handle (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:5:45978)\n' +
+    '    at async responseGenerator (/app/.next/server/chunks/dd0d4_next_b26d18d7._.js:15715:38)\n' +
+    '    at async AppRouteRouteModule.handleResponse (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:1:187643)\n' +
+    '    at async handleResponse (/app/.next/server/chunks/dd0d4_next_b26d18d7._.js:15777:32)\n' +
+    '    at async handler (/app/.next/server/chunks/dd0d4_next_b26d18d7._.js:15829:13)\n' +
+    '    at async DevServer.renderToResponseWithComponentsImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1422:9)\n' +
+    '    at async DevServer.renderPageComponent (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1474:24)\n' +
+    '    at async DevServer.renderToResponseImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1514:32)\n' +
+    '    at async DevServer.pipeImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1025:25)\n' +
+    '    at async NextNodeServer.handleCatchallRenderRequest (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/next-server.js:393:17)\n' +
+    '    at async DevServer.handleRequestImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:916:17)\n' +
+    '    at async /app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/dev/next-dev-server.js:399:20\n' +
+    '    at async Span.traceAsyncFn (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/trace/trace.js:157:20)\n' +
+    '    at async DevServer.handleRequest (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/dev/next-dev-server.js:395:24)\n' +
+    '    at async invokeRender (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/router-server.js:240:21)\n' +
+    '    at async handleRequest (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/router-server.js:437:24)\n' +
+    '    at async requestHandlerImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/router-server.js:485:13)\n' +
+    '    at async Server.requestListener (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/start-server.js:226:13)',
+  hint: '',
+  code: ''
+}
+ GET /api/image-limit 200 in 468ms
+Auth token refresh failed: Auth session missing!
+ POST /api/update-video-analysis 401 in 284ms
+Auth token refresh failed: Auth session missing!
+Auth token refresh failed: Auth session missing!
+ GET /analyze/test-video-123 200 in 302ms
+Auth token refresh failed: Auth session missing!
+Auth token refresh failed: Auth session missing!
+Auth token refresh failed: Auth session missing!
+Rate limiter error: {
+  message: 'TypeError: fetch failed',
+  details: 'TypeError: fetch failed\n' +
+    '    at node:internal/deps/undici/undici:14900:13\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at async RateLimiter.check (/app/.next/server/chunks/[root-of-the-server]__30d340b0._.js:315:65)\n' +
+    '    at async securedHandler (/app/.next/server/chunks/[root-of-the-server]__30d340b0._.js:711:41)\n' +
+    '    at async AppRouteRouteModule.do (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:5:38696)\n' +
+    '    at async AppRouteRouteModule.handle (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:5:45978)\n' +
+    '    at async responseGenerator (/app/.next/server/chunks/dd0d4_next_b26d18d7._.js:15715:38)\n' +
+    '    at async AppRouteRouteModule.handleResponse (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:1:187643)\n' +
+    '    at async handleResponse (/app/.next/server/chunks/dd0d4_next_b26d18d7._.js:15777:32)\n' +
+    '    at async handler (/app/.next/server/chunks/dd0d4_next_b26d18d7._.js:15829:13)\n' +
+    '    at async DevServer.renderToResponseWithComponentsImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1422:9)\n' +
+    '    at async DevServer.renderPageComponent (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1474:24)\n' +
+    '    at async DevServer.renderToResponseImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1514:32)\n' +
+    '    at async DevServer.pipeImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1025:25)\n' +
+    '    at async NextNodeServer.handleCatchallRenderRequest (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/next-server.js:393:17)\n' +
+    '    at async DevServer.handleRequestImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:916:17)\n' +
+    '    at async /app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/dev/next-dev-server.js:399:20\n' +
+    '    at async Span.traceAsyncFn (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/trace/trace.js:157:20)\n' +
+    '    at async DevServer.handleRequest (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/dev/next-dev-server.js:395:24)\n' +
+    '    at async invokeRender (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/router-server.js:240:21)\n' +
+    '    at async handleRequest (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/router-server.js:437:24)\n' +
+    '    at async requestHandlerImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/router-server.js:485:13)\n' +
+    '    at async Server.requestListener (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/start-server.js:226:13)',
+  hint: '',
+  code: ''
+}
+ GET /api/image-limit 200 in 440ms
+Rate limiter error: {
+  message: 'TypeError: fetch failed',
+  details: 'TypeError: fetch failed\n' +
+    '    at node:internal/deps/undici/undici:14900:13\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at async RateLimiter.check (/app/.next/server/chunks/[root-of-the-server]__30d340b0._.js:315:65)\n' +
+    '    at async securedHandler (/app/.next/server/chunks/[root-of-the-server]__30d340b0._.js:711:41)\n' +
+    '    at async AppRouteRouteModule.do (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:5:38696)\n' +
+    '    at async AppRouteRouteModule.handle (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:5:45978)\n' +
+    '    at async responseGenerator (/app/.next/server/chunks/dd0d4_next_b26d18d7._.js:15715:38)\n' +
+    '    at async AppRouteRouteModule.handleResponse (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:1:187643)\n' +
+    '    at async handleResponse (/app/.next/server/chunks/dd0d4_next_b26d18d7._.js:15777:32)\n' +
+    '    at async handler (/app/.next/server/chunks/dd0d4_next_b26d18d7._.js:15829:13)\n' +
+    '    at async DevServer.renderToResponseWithComponentsImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1422:9)\n' +
+    '    at async DevServer.renderPageComponent (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1474:24)\n' +
+    '    at async DevServer.renderToResponseImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1514:32)\n' +
+    '    at async DevServer.pipeImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1025:25)\n' +
+    '    at async NextNodeServer.handleCatchallRenderRequest (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/next-server.js:393:17)\n' +
+    '    at async DevServer.handleRequestImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:916:17)\n' +
+    '    at async /app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/dev/next-dev-server.js:399:20\n' +
+    '    at async Span.traceAsyncFn (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/trace/trace.js:157:20)\n' +
+    '    at async DevServer.handleRequest (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/dev/next-dev-server.js:395:24)\n' +
+    '    at async invokeRender (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/router-server.js:240:21)\n' +
+    '    at async handleRequest (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/router-server.js:437:24)\n' +
+    '    at async requestHandlerImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/router-server.js:485:13)\n' +
+    '    at async Server.requestListener (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/start-server.js:226:13)',
+  hint: '',
+  code: ''
+}
+ GET /api/image-limit 200 in 449ms
+ GET /api/csrf-token 401 in 372ms
+Auth token refresh failed: Auth session missing!
+ POST /api/update-video-analysis 401 in 278ms
+Auth token refresh failed: Auth session missing!
+ GET /analyze/test-video-123 200 in 1099ms
+Auth token refresh failed: Auth session missing!
+Auth token refresh failed: Auth session missing!
+Auth token refresh failed: Auth session missing!
+Rate limiter error: {
+  message: 'TypeError: fetch failed',
+  details: 'TypeError: fetch failed\n' +
+    '    at node:internal/deps/undici/undici:14900:13\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at async RateLimiter.check (/app/.next/server/chunks/[root-of-the-server]__30d340b0._.js:315:65)\n' +
+    '    at async securedHandler (/app/.next/server/chunks/[root-of-the-server]__30d340b0._.js:711:41)\n' +
+    '    at async AppRouteRouteModule.do (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:5:38696)\n' +
+    '    at async AppRouteRouteModule.handle (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:5:45978)\n' +
+    '    at async responseGenerator (/app/.next/server/chunks/dd0d4_next_b26d18d7._.js:15715:38)\n' +
+    '    at async AppRouteRouteModule.handleResponse (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:1:187643)\n' +
+    '    at async handleResponse (/app/.next/server/chunks/dd0d4_next_b26d18d7._.js:15777:32)\n' +
+    '    at async handler (/app/.next/server/chunks/dd0d4_next_b26d18d7._.js:15829:13)\n' +
+    '    at async DevServer.renderToResponseWithComponentsImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1422:9)\n' +
+    '    at async DevServer.renderPageComponent (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1474:24)\n' +
+    '    at async DevServer.renderToResponseImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1514:32)\n' +
+    '    at async DevServer.pipeImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1025:25)\n' +
+    '    at async NextNodeServer.handleCatchallRenderRequest (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/next-server.js:393:17)\n' +
+    '    at async DevServer.handleRequestImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:916:17)\n' +
+    '    at async /app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/dev/next-dev-server.js:399:20\n' +
+    '    at async Span.traceAsyncFn (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/trace/trace.js:157:20)\n' +
+    '    at async DevServer.handleRequest (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/dev/next-dev-server.js:395:24)\n' +
+    '    at async invokeRender (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/router-server.js:240:21)\n' +
+    '    at async handleRequest (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/router-server.js:437:24)\n' +
+    '    at async requestHandlerImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/router-server.js:485:13)\n' +
+    '    at async Server.requestListener (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/start-server.js:226:13)',
+  hint: '',
+  code: ''
+}
+ GET /api/image-limit 200 in 466ms
+Rate limiter error: {
+  message: 'TypeError: fetch failed',
+  details: 'TypeError: fetch failed\n' +
+    '    at node:internal/deps/undici/undici:14900:13\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at async RateLimiter.check (/app/.next/server/chunks/[root-of-the-server]__30d340b0._.js:315:65)\n' +
+    '    at async securedHandler (/app/.next/server/chunks/[root-of-the-server]__30d340b0._.js:711:41)\n' +
+    '    at async AppRouteRouteModule.do (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:5:38696)\n' +
+    '    at async AppRouteRouteModule.handle (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:5:45978)\n' +
+    '    at async responseGenerator (/app/.next/server/chunks/dd0d4_next_b26d18d7._.js:15715:38)\n' +
+    '    at async AppRouteRouteModule.handleResponse (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:1:187643)\n' +
+    '    at async handleResponse (/app/.next/server/chunks/dd0d4_next_b26d18d7._.js:15777:32)\n' +
+    '    at async handler (/app/.next/server/chunks/dd0d4_next_b26d18d7._.js:15829:13)\n' +
+    '    at async DevServer.renderToResponseWithComponentsImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1422:9)\n' +
+    '    at async DevServer.renderPageComponent (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1474:24)\n' +
+    '    at async DevServer.renderToResponseImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1514:32)\n' +
+    '    at async DevServer.pipeImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1025:25)\n' +
+    '    at async NextNodeServer.handleCatchallRenderRequest (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/next-server.js:393:17)\n' +
+    '    at async DevServer.handleRequestImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:916:17)\n' +
+    '    at async /app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/dev/next-dev-server.js:399:20\n' +
+    '    at async Span.traceAsyncFn (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/trace/trace.js:157:20)\n' +
+    '    at async DevServer.handleRequest (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/dev/next-dev-server.js:395:24)\n' +
+    '    at async invokeRender (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/router-server.js:240:21)\n' +
+    '    at async handleRequest (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/router-server.js:437:24)\n' +
+    '    at async requestHandlerImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/router-server.js:485:13)\n' +
+    '    at async Server.requestListener (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/start-server.js:226:13)',
+  hint: '',
+  code: ''
+}
+ GET /api/image-limit 200 in 471ms
+ GET /api/csrf-token 401 in 388ms
+Auth token refresh failed: Auth session missing!
+ POST /api/update-video-analysis 401 in 292ms
+Auth token refresh failed: Auth session missing!
+ GET /analyze/test-video-123 200 in 1129ms
+Auth token refresh failed: Auth session missing!
+ GET /api/csrf-token 401 in 303ms
+Auth token refresh failed: Auth session missing!
+ POST /api/update-video-analysis 401 in 285ms
+Auth token refresh failed: Auth session missing!
+ GET /analyze/test-video-123 200 in 1178ms
+Auth token refresh failed: Auth session missing!
+ GET /api/csrf-token 401 in 325ms
+Auth token refresh failed: Auth session missing!
+ POST /api/update-video-analysis 401 in 285ms
+Auth token refresh failed: Auth session missing!
+ GET /analyze/test-video-123 200 in 1148ms
+Auth token refresh failed: Auth session missing!
+Auth token refresh failed: Auth session missing!
+Auth token refresh failed: Auth session missing!
+Rate limiter error: {
+  message: 'TypeError: fetch failed',
+  details: 'TypeError: fetch failed\n' +
+    '    at node:internal/deps/undici/undici:14900:13\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at async RateLimiter.check (/app/.next/server/chunks/[root-of-the-server]__30d340b0._.js:315:65)\n' +
+    '    at async securedHandler (/app/.next/server/chunks/[root-of-the-server]__30d340b0._.js:711:41)\n' +
+    '    at async AppRouteRouteModule.do (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:5:38696)\n' +
+    '    at async AppRouteRouteModule.handle (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:5:45978)\n' +
+    '    at async responseGenerator (/app/.next/server/chunks/dd0d4_next_b26d18d7._.js:15715:38)\n' +
+    '    at async AppRouteRouteModule.handleResponse (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:1:187643)\n' +
+    '    at async handleResponse (/app/.next/server/chunks/dd0d4_next_b26d18d7._.js:15777:32)\n' +
+    '    at async handler (/app/.next/server/chunks/dd0d4_next_b26d18d7._.js:15829:13)\n' +
+    '    at async DevServer.renderToResponseWithComponentsImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1422:9)\n' +
+    '    at async DevServer.renderPageComponent (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1474:24)\n' +
+    '    at async DevServer.renderToResponseImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1514:32)\n' +
+    '    at async DevServer.pipeImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1025:25)\n' +
+    '    at async NextNodeServer.handleCatchallRenderRequest (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/next-server.js:393:17)\n' +
+    '    at async DevServer.handleRequestImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:916:17)\n' +
+    '    at async /app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/dev/next-dev-server.js:399:20\n' +
+    '    at async Span.traceAsyncFn (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/trace/trace.js:157:20)\n' +
+    '    at async DevServer.handleRequest (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/dev/next-dev-server.js:395:24)\n' +
+    '    at async invokeRender (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/router-server.js:240:21)\n' +
+    '    at async handleRequest (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/router-server.js:437:24)\n' +
+    '    at async requestHandlerImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/router-server.js:485:13)\n' +
+    '    at async Server.requestListener (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/start-server.js:226:13)',
+  hint: '',
+  code: ''
+}
+ GET /api/image-limit 200 in 432ms
+Rate limiter error: {
+  message: 'TypeError: fetch failed',
+  details: 'TypeError: fetch failed\n' +
+    '    at node:internal/deps/undici/undici:14900:13\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at async RateLimiter.check (/app/.next/server/chunks/[root-of-the-server]__30d340b0._.js:315:65)\n' +
+    '    at async securedHandler (/app/.next/server/chunks/[root-of-the-server]__30d340b0._.js:711:41)\n' +
+    '    at async AppRouteRouteModule.do (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:5:38696)\n' +
+    '    at async AppRouteRouteModule.handle (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:5:45978)\n' +
+    '    at async responseGenerator (/app/.next/server/chunks/dd0d4_next_b26d18d7._.js:15715:38)\n' +
+    '    at async AppRouteRouteModule.handleResponse (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:1:187643)\n' +
+    '    at async handleResponse (/app/.next/server/chunks/dd0d4_next_b26d18d7._.js:15777:32)\n' +
+    '    at async handler (/app/.next/server/chunks/dd0d4_next_b26d18d7._.js:15829:13)\n' +
+    '    at async DevServer.renderToResponseWithComponentsImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1422:9)\n' +
+    '    at async DevServer.renderPageComponent (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1474:24)\n' +
+    '    at async DevServer.renderToResponseImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1514:32)\n' +
+    '    at async DevServer.pipeImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1025:25)\n' +
+    '    at async NextNodeServer.handleCatchallRenderRequest (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/next-server.js:393:17)\n' +
+    '    at async DevServer.handleRequestImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:916:17)\n' +
+    '    at async /app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/dev/next-dev-server.js:399:20\n' +
+    '    at async Span.traceAsyncFn (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/trace/trace.js:157:20)\n' +
+    '    at async DevServer.handleRequest (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/dev/next-dev-server.js:395:24)\n' +
+    '    at async invokeRender (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/router-server.js:240:21)\n' +
+    '    at async handleRequest (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/router-server.js:437:24)\n' +
+    '    at async requestHandlerImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/router-server.js:485:13)\n' +
+    '    at async Server.requestListener (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/start-server.js:226:13)',
+  hint: '',
+  code: ''
+}
+ GET /api/image-limit 200 in 435ms
+ GET /api/csrf-token 401 in 315ms
+Auth token refresh failed: Auth session missing!
+ POST /api/update-video-analysis 401 in 282ms
+Auth token refresh failed: Auth session missing!
+ GET /analyze/test-video-123 200 in 1332ms
+Auth token refresh failed: Auth session missing!
+Auth token refresh failed: Auth session missing!
+Auth token refresh failed: Auth session missing!
+Rate limiter error: {
+  message: 'TypeError: fetch failed',
+  details: 'TypeError: fetch failed\n' +
+    '    at node:internal/deps/undici/undici:14900:13\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at async RateLimiter.check (/app/.next/server/chunks/[root-of-the-server]__30d340b0._.js:315:65)\n' +
+    '    at async securedHandler (/app/.next/server/chunks/[root-of-the-server]__30d340b0._.js:711:41)\n' +
+    '    at async AppRouteRouteModule.do (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:5:38696)\n' +
+    '    at async AppRouteRouteModule.handle (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:5:45978)\n' +
+    '    at async responseGenerator (/app/.next/server/chunks/dd0d4_next_b26d18d7._.js:15715:38)\n' +
+    '    at async AppRouteRouteModule.handleResponse (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:1:187643)\n' +
+    '    at async handleResponse (/app/.next/server/chunks/dd0d4_next_b26d18d7._.js:15777:32)\n' +
+    '    at async handler (/app/.next/server/chunks/dd0d4_next_b26d18d7._.js:15829:13)\n' +
+    '    at async DevServer.renderToResponseWithComponentsImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1422:9)\n' +
+    '    at async DevServer.renderPageComponent (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1474:24)\n' +
+    '    at async DevServer.renderToResponseImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1514:32)\n' +
+    '    at async DevServer.pipeImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1025:25)\n' +
+    '    at async NextNodeServer.handleCatchallRenderRequest (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/next-server.js:393:17)\n' +
+    '    at async DevServer.handleRequestImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:916:17)\n' +
+    '    at async /app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/dev/next-dev-server.js:399:20\n' +
+    '    at async Span.traceAsyncFn (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/trace/trace.js:157:20)\n' +
+    '    at async DevServer.handleRequest (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/dev/next-dev-server.js:395:24)\n' +
+    '    at async invokeRender (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/router-server.js:240:21)\n' +
+    '    at async handleRequest (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/router-server.js:437:24)\n' +
+    '    at async requestHandlerImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/router-server.js:485:13)\n' +
+    '    at async Server.requestListener (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/start-server.js:226:13)',
+  hint: '',
+  code: ''
+}
+ GET /api/image-limit 200 in 470ms
+Rate limiter error: {
+  message: 'TypeError: fetch failed',
+  details: 'TypeError: fetch failed\n' +
+    '    at node:internal/deps/undici/undici:14900:13\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at async RateLimiter.check (/app/.next/server/chunks/[root-of-the-server]__30d340b0._.js:315:65)\n' +
+    '    at async securedHandler (/app/.next/server/chunks/[root-of-the-server]__30d340b0._.js:711:41)\n' +
+    '    at async AppRouteRouteModule.do (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:5:38696)\n' +
+    '    at async AppRouteRouteModule.handle (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:5:45978)\n' +
+    '    at async responseGenerator (/app/.next/server/chunks/dd0d4_next_b26d18d7._.js:15715:38)\n' +
+    '    at async AppRouteRouteModule.handleResponse (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:1:187643)\n' +
+    '    at async handleResponse (/app/.next/server/chunks/dd0d4_next_b26d18d7._.js:15777:32)\n' +
+    '    at async handler (/app/.next/server/chunks/dd0d4_next_b26d18d7._.js:15829:13)\n' +
+    '    at async DevServer.renderToResponseWithComponentsImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1422:9)\n' +
+    '    at async DevServer.renderPageComponent (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1474:24)\n' +
+    '    at async DevServer.renderToResponseImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1514:32)\n' +
+    '    at async DevServer.pipeImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1025:25)\n' +
+    '    at async NextNodeServer.handleCatchallRenderRequest (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/next-server.js:393:17)\n' +
+    '    at async DevServer.handleRequestImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:916:17)\n' +
+    '    at async /app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/dev/next-dev-server.js:399:20\n' +
+    '    at async Span.traceAsyncFn (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/trace/trace.js:157:20)\n' +
+    '    at async DevServer.handleRequest (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/dev/next-dev-server.js:395:24)\n' +
+    '    at async invokeRender (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/router-server.js:240:21)\n' +
+    '    at async handleRequest (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/router-server.js:437:24)\n' +
+    '    at async requestHandlerImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/router-server.js:485:13)\n' +
+    '    at async Server.requestListener (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/start-server.js:226:13)',
+  hint: '',
+  code: ''
+}
+ GET /api/image-limit 200 in 475ms
+ GET /api/csrf-token 401 in 404ms
+Auth token refresh failed: Auth session missing!
+ POST /api/update-video-analysis 401 in 318ms
+Auth token refresh failed: Auth session missing!
+ GET /analyze/test-video-123 200 in 495ms
+Auth token refresh failed: Auth session missing!
+Auth token refresh failed: Auth session missing!
+Rate limiter error: {
+  message: 'TypeError: fetch failed',
+  details: 'TypeError: fetch failed\n' +
+    '    at node:internal/deps/undici/undici:14900:13\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at async RateLimiter.check (/app/.next/server/chunks/[root-of-the-server]__30d340b0._.js:315:65)\n' +
+    '    at async securedHandler (/app/.next/server/chunks/[root-of-the-server]__30d340b0._.js:711:41)\n' +
+    '    at async AppRouteRouteModule.do (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:5:38696)\n' +
+    '    at async AppRouteRouteModule.handle (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:5:45978)\n' +
+    '    at async responseGenerator (/app/.next/server/chunks/dd0d4_next_b26d18d7._.js:15715:38)\n' +
+    '    at async AppRouteRouteModule.handleResponse (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:1:187643)\n' +
+    '    at async handleResponse (/app/.next/server/chunks/dd0d4_next_b26d18d7._.js:15777:32)\n' +
+    '    at async handler (/app/.next/server/chunks/dd0d4_next_b26d18d7._.js:15829:13)\n' +
+    '    at async DevServer.renderToResponseWithComponentsImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1422:9)\n' +
+    '    at async DevServer.renderPageComponent (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1474:24)\n' +
+    '    at async DevServer.renderToResponseImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1514:32)\n' +
+    '    at async DevServer.pipeImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1025:25)\n' +
+    '    at async NextNodeServer.handleCatchallRenderRequest (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/next-server.js:393:17)\n' +
+    '    at async DevServer.handleRequestImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:916:17)\n' +
+    '    at async /app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/dev/next-dev-server.js:399:20\n' +
+    '    at async Span.traceAsyncFn (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/trace/trace.js:157:20)\n' +
+    '    at async DevServer.handleRequest (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/dev/next-dev-server.js:395:24)\n' +
+    '    at async invokeRender (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/router-server.js:240:21)\n' +
+    '    at async handleRequest (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/router-server.js:437:24)\n' +
+    '    at async requestHandlerImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/router-server.js:485:13)\n' +
+    '    at async Server.requestListener (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/start-server.js:226:13)',
+  hint: '',
+  code: ''
+}
+ GET /api/image-limit 200 in 460ms
+Rate limiter error: {
+  message: 'TypeError: fetch failed',
+  details: 'TypeError: fetch failed\n' +
+    '    at node:internal/deps/undici/undici:14900:13\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at async RateLimiter.check (/app/.next/server/chunks/[root-of-the-server]__30d340b0._.js:315:65)\n' +
+    '    at async securedHandler (/app/.next/server/chunks/[root-of-the-server]__30d340b0._.js:711:41)\n' +
+    '    at async AppRouteRouteModule.do (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:5:38696)\n' +
+    '    at async AppRouteRouteModule.handle (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:5:45978)\n' +
+    '    at async responseGenerator (/app/.next/server/chunks/dd0d4_next_b26d18d7._.js:15715:38)\n' +
+    '    at async AppRouteRouteModule.handleResponse (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.dev.js:1:187643)\n' +
+    '    at async handleResponse (/app/.next/server/chunks/dd0d4_next_b26d18d7._.js:15777:32)\n' +
+    '    at async handler (/app/.next/server/chunks/dd0d4_next_b26d18d7._.js:15829:13)\n' +
+    '    at async DevServer.renderToResponseWithComponentsImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1422:9)\n' +
+    '    at async DevServer.renderPageComponent (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1474:24)\n' +
+    '    at async DevServer.renderToResponseImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1514:32)\n' +
+    '    at async DevServer.pipeImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:1025:25)\n' +
+    '    at async NextNodeServer.handleCatchallRenderRequest (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/next-server.js:393:17)\n' +
+    '    at async DevServer.handleRequestImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/base-server.js:916:17)\n' +
+    '    at async /app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/dev/next-dev-server.js:399:20\n' +
+    '    at async Span.traceAsyncFn (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/trace/trace.js:157:20)\n' +
+    '    at async DevServer.handleRequest (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/dev/next-dev-server.js:395:24)\n' +
+    '    at async invokeRender (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/router-server.js:240:21)\n' +
+    '    at async handleRequest (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/router-server.js:437:24)\n' +
+    '    at async requestHandlerImpl (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/router-server.js:485:13)\n' +
+    '    at async Server.requestListener (/app/node_modules/.pnpm/next@15.5.7_react-dom@19.1.2_react@19.1.2__react@19.1.2/node_modules/next/dist/server/lib/start-server.js:226:13)',
+  hint: '',
+  code: ''
+}
+ GET /api/image-limit 200 in 464ms
+Auth token refresh failed: Auth session missing!
+ GET /api/csrf-token 401 in 385ms
+Auth token refresh failed: Auth session missing!
+ POST /api/update-video-analysis 401 in 356ms

@@ -1753,7 +1753,22 @@ export default function AnalyzePage() {
     });
   }, [promptSignInForNotes, user]);
 
-  const handleSaveEditingNote = useCallback(async ({ noteText, selectedText }: { noteText: string; selectedText: string }) => {
+  const handleAddNote = useCallback(() => {
+    if (!user) {
+      promptSignInForNotes();
+      return;
+    }
+
+    rightColumnTabsRef.current?.switchToNotes();
+
+    setEditingNote({
+      text: "",
+      metadata: null,
+      source: "custom",
+    });
+  }, [user, promptSignInForNotes]);
+
+  const handleSaveEditingNote = useCallback(async ({ noteText, selectedText, metadata }: { noteText: string; selectedText: string; metadata?: NoteMetadata }) => {
     if (!editingNote || !videoId) return;
 
     // Use source from editing note or determine from metadata
@@ -1771,8 +1786,12 @@ export default function AnalyzePage() {
       ? {
         ...(editingNote.metadata ?? {}),
         selectedText: normalizedSelected,
+        ...(metadata ?? {})
       }
-      : editingNote.metadata ?? undefined;
+      : {
+        ...(editingNote.metadata ?? {}),
+        ...(metadata ?? {})
+      };
 
     await handleSaveNote({
       text: noteText,
@@ -1999,6 +2018,7 @@ export default function AnalyzePage() {
                   editingNote={editingNote}
                   onSaveEditingNote={handleSaveEditingNote}
                   onCancelEditing={handleCancelEditing}
+                  onAddNote={handleAddNote}
                   isAuthenticated={!!user}
                   onRequestSignIn={handleAuthRequired}
                   selectedLanguage={selectedLanguage}
