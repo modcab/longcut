@@ -335,6 +335,8 @@ async function handler(req: NextRequest) {
 
         if (!consumeResult.success) {
           console.error('Failed to consume cached video credit:', consumeResult.error);
+        } else if (consumeResult.deduplicated) {
+          console.log(`[video-analysis] Deduplicated credit for cached video ${videoId} (user: ${user.id})`);
         }
       }
 
@@ -423,6 +425,8 @@ async function handler(req: NextRequest) {
 
       if (!consumeResult.success) {
         console.error('Failed to consume video credit:', consumeResult.error);
+      } else if (consumeResult.deduplicated) {
+        console.log(`[video-analysis] Deduplicated credit for new video ${videoId} (user: ${user.id})`);
       }
     }
 

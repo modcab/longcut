@@ -414,6 +414,7 @@ export async function consumeVideoCreditAtomic({
   usedTopup?: boolean;
   allowed?: boolean;
   reason?: string;
+  deduplicated?: boolean;
 }> {
   const supabase = client ?? (await createClient());
 
@@ -447,12 +448,18 @@ export async function consumeVideoCreditAtomic({
     };
   }
 
+  // Log deduplication for monitoring
+  if (result.deduplicated) {
+    console.log(`[subscription-manager] Deduplicated credit consumption for user ${userId}, video ${youtubeId}`);
+  }
+
   return {
     success: true,
     allowed: true,
     generationId: result.generation_id,
     usedTopup: Boolean(result.used_topup),
     reason: result.reason,
+    deduplicated: Boolean(result.deduplicated),
   };
 }
 
