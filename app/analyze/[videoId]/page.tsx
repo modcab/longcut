@@ -1907,7 +1907,7 @@ export default function AnalyzePage() {
 
       {pageState === 'LOADING_CACHED' && (
         <section className="flex min-h-[calc(100vh-11rem)] items-center justify-center px-5">
-          <div className="w-full max-w-7xl">
+          <div className="w-full max-w-[1800px]">
             <VideoSkeleton />
           </div>
         </section>
@@ -1996,7 +1996,7 @@ export default function AnalyzePage() {
       )}
 
       {videoId && topics.length > 0 && pageState === 'IDLE' && (
-        <div className="mx-auto w-full max-w-7xl px-5 pb-5 pt-0">
+        <div className="mx-auto w-full max-w-[1800px] px-5 pb-5 pt-0">
           {error && (
             <div className="mb-6 rounded-xl border border-red-100 bg-red-50 px-4 py-3 text-xs font-medium text-red-600 shadow-sm">
               {error}
